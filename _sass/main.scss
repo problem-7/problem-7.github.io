@@ -1,0 +1,143 @@
+
+$base: #FFFFFF;
+$texture: #F9E2AF;
+$contrast: #4A249D;
+$highlight: #009FBD;
+
+html {
+	scroll-behavior: smooth;
+}
+
+.intro {
+	font-size: 15pt;
+	font-weight: 550;
+}
+
+.src {
+	text-align: right;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	background-color: $base;
+
+	main {
+		margin: 50px 10%;
+		min-height: 100vh;
+	
+		a {
+			color: $contrast;
+			transition: color 0.3s;
+			&:hover {
+				color: $highlight;
+			}
+		}
+	}
+}
+
+h2 {
+	margin-bottom: 0;
+	color: $contrast;
+	&::after {
+		content: "";
+	    display: block;
+	    width: 100%;
+	    height: 2px;
+	    background-color: $contrast;
+	    margin: 5px 0;
+	}
+}
+
+h3 {
+	margin-bottom: -10px;
+}
+
+
+header {
+	padding: 0px;
+	background-color: $base;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid;
+	a {
+		float: left;
+		padding: 20px;
+		color: black;
+		text-decoration: none;
+		transition: color 0.3s;
+		&.current {
+			font-weight: bold;
+		}
+		&:hover {
+			color: $highlight;
+		}
+	}
+}
+
+.resume {
+	.resume-entry {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 5px;
+	}
+	.resume-left {
+		width: 200px;
+	}
+	.resume-right {
+		width: 500px;
+	}
+}
+
+.tab {
+	display: block;
+	margin: 20px 0px;
+	.tab-label {
+		text-align: center;
+		cursor: pointer;
+		font-size: x-large;
+		font-weight: bold;
+		color: white;
+		&:hover {
+			color: gray;
+		}
+	}
+	.tab-content {
+		display: none;
+		margin-top: 10px;
+	}
+	input {
+		display: none;
+		&:checked {
+			~ .tab-content {
+				display: block;
+			}
+			~ .tab-label {
+				color: white;
+			}
+		}
+	}
+}
+
+// footer {
+// 	background-color: $base;
+// 	border-top: 1px solid;
+// 	height: 100px;
+// 	display: flex;
+// 	justify-content: space-around;
+// 	align-items: center;
+
+// 	a {
+// 		color: grey;
+// 		text-decoration: none;
+// 		&:hover {
+// 			color: $highlight;
+// 		}
+// 	}
+// }
+
