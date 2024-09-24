@@ -1,4 +1,5 @@
 ---
+title: Problem 7
 layout: default
 ---
 # Problem 7
